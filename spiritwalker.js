@@ -66,6 +66,11 @@ class spirit { // my class spirit
   }
 
   trail() {
+    //var loc;
+    //var velocity;
+    //loc= createVector(5,3);
+    //velocity=createVector(8,7);
+    //loc.add(velocity);
   }
   haloGlow() {
     if (FrameCount % 2 == 0) { // my aura will flicker every 5 frames

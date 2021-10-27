@@ -1,6 +1,6 @@
 // * a preamble for my project *
 // this is the second iteration of my project 1,  
-// my original idea for this project was largely based on a interactable landscape that showed a group of cities interconnected with each other. 
+// my original idea for this project was largely based on a interactable landscape that showed a group of cities interconnected with each other.
 // But I largely struggled to draw within processing (even with crosshairs).
 // So I pivoted my project more towards the idea of kindred spirits.
 // Theses souls who are on a journey to find each other, stumbling around a canvas looking for each other, and once they find each other, the kindred spirits are fulfilled
