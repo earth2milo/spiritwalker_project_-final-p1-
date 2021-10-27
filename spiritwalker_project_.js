@@ -1,15 +1,14 @@
 var angelics = []; // my colors
 
-
 let wanderer;// my first spirit (my first object)
 let kindred; // my second spirit
 
 
 function setup() {
   createCanvas(800, 800);
-  background(131,119,82); //
+  //background(255); //
   wanderer= new spirit(300,300);
-  kindred= new spirit(mouseX,mouseY);
+  kindred= new spirit(500,500);
   
   angelics[0] = color(227,38,54); // My red
   angelics[1] = color(0,62,131); // my blue
@@ -22,11 +21,11 @@ function setup() {
 
 
 function draw() {
-
-wanderer.move(13);
-wanderer.display(30);
-kindred.move(13);
-kindred.display(30);
+background(255);
+wanderer.move(3);
+wanderer.display(255);
+kindred.move(5);
+kindred.display(255);
 //background(angelics[(random(0,4))]);
 
 }
