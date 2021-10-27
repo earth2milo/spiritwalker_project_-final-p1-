@@ -1,7 +1,7 @@
-var stX;
+var stX; // my handoff statements for the constructor
 var stY;
 
-class spirit {
+class spirit { // my class spirit
 
 
   constructor(startX, startY) { // my constructor statement
@@ -22,21 +22,18 @@ class spirit {
 
     stroke(0, 62, 131, alpha); // fill
 
-   
+
     strokeWeight(this.diameter); // thickness for the spirit's line
-    
+
     point(this.x, this.y); // my spirit's head
-    
+
     point(this.x, this.y+7.5); // my spirit's body
-   
-    
+
+
     ellipseMode(CENTER);
     stroke(255, 215, 0, alpha); // gold
     noFill();
     ellipse(this.x, this.y-10, 7, 1 ); // my halo
-    noStroke();
-    fill(1);
-    ellipse(this.x, this.y-6.5,24,10);
   }
 
   move(rate) { // my move with a local variable that modifies speed
@@ -62,6 +59,22 @@ class spirit {
 
       this.x=stX; //
       this.y=stY;
+    }
+  }
+
+  trail() {
+  }
+  haloGlow() {
+    if (FrameCount % 2 == 0) { // my aura will flicker every 5 frames
+
+      noStroke();
+      fill(1);
+      ellipse(this.x, this.y-6.5, 24, 10); // halo glowing aura
+    } else {
+
+      noStroke();
+      fill(130);
+      ellipse(this.x, this.y-6.5, 24, 10);
     }
   }
 }
