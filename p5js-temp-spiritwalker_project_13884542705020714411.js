@@ -37,7 +37,7 @@ function draw() {
 //colorSwitch=random(angelics.length);
 //colorSwitch=floor(angelics);
 background(angelics[4]);
-//background(angelics[int(random(0,angelics.length))]); // strobe light, cycles through all colors
+//background(angelics[int(random(0,angelics.length))]);
 wanderer.move(3);
 //wander.haloGlow();
 wanderer.display(255);
