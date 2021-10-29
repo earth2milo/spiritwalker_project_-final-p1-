@@ -30,7 +30,7 @@ function setup() {
   //translate(width, height);
   //background(angelics[4]);
 
-  wanderer= new spirit(300, 300);
+  wanderer= new spirit(300, 400);
   kindred= new spirit(300, 500);
 }
 
@@ -40,12 +40,7 @@ varyingB();
   
     
   
-  //heartTrail();
-
-  //if (frameCount% == 5) { // my aura will flicker every 5 frames
-  //fill(angelics[int(random(0,angelics.length))]);
-
-  //  }
+  
   if (frameCount%5==0) { // makes my first little trail with this effect by modifying the background's alpha value
     alpha++;
   }
@@ -58,5 +53,6 @@ varyingB();
 
 
 wanderer.display(255);
-wanderer.move(8);
+wanderer.move();
+
 }
