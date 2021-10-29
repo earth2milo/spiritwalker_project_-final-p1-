@@ -51,7 +51,7 @@ varyingB();
 kindred.display(255,500,255);
 kindred.move(4,10);
 sky.display(200,200,255);
-sky.move(3,10);
+sky.move(200,10);
 
 //let d = dist(wanderer.x, wanderer.y, kindred.x, kindred.y);
 }
