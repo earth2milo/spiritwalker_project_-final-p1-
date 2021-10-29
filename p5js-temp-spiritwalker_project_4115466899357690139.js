@@ -46,12 +46,12 @@ varyingB();
     alpha=0;
   }
   background(125, 62, 30,alpha);
-//wanderer.display(255);
-//wanderer.move();
+wanderer.display(255,100,300);
+wanderer.move(8,10);
 kindred.display(255,500,255);
 kindred.move(4,10);
 sky.display(200,200,255);
-sky.move(200,10);
+sky.move(3,10);
 
 //let d = dist(wanderer.x, wanderer.y, kindred.x, kindred.y);
 }

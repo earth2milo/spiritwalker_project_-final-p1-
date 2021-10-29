@@ -74,11 +74,11 @@ class spirit { // my class spirit
 
     pos.add(step);
 
-    //line(pos.x, pos.y, prev.x, prev.y); // I want to change this shape into a heart
-    //prev.set(pos); // sets the previous position to current pos
+    line(pos.x, pos.y, prev.x, prev.y); // I want to change this shape into a heart
+    prev.set(pos); // sets the previous position to current pos
     //// I wanna add if statements to decrease movement speed and make the spirits more angelic
-    //let v = createVector(this.x, this.y); // my vector trail
-    //this.history.push(v); // storing my two coordinates paths
+    let v = createVector(this.x, this.y); // my vector trail
+    this.history.push(v); // storing my two coordinates paths
 
 
     if ( step >= width || step >= height ) { // if statement that resets to initial position
