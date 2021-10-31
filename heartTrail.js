@@ -1,28 +1,34 @@
 // added function from challenge in class that I made with Charles during Challenge #2.
-var geo;
 class clouds {
 
   constructor() {
-
- 
+this.fill = color(random(200,255)); // defining my clases instructions
+this.xpos = 0;
+this.ypos = 0;
+this.xspeed = 1;
   }
 
-  draw(x, y, f, h) {
-    stroke(angelics[int(random(0, angelics.length))]);
-    fill(f);        // cloud2
-    ellipse(geo.x+x, geo.y+y, 40+h, 40);
-    ellipse(geo.x+x, geo.y+y, 40, 40);
-    ellipse(geo.x+x, geo.y+y, 40, 40+h);
-    ellipse(geo.x+x, geo.y+y, 40+h, 40);
-    ellipse(geo.x+x, geo.y+y, 40, 40+h);
+  draw(x,y,h) {
+   
+    strokeWeight(3);
+    noStroke();
+    fill(this.fill);       
+    ellipse(this.xpos+x, this.ypos+y, 40+h, 40);
+    ellipse(this.xpos+x, this.ypos+y, 40, 40);
+    ellipse(this.xpos+x, this.ypos+y, 40, 40+h);
+    ellipse(this.xpos+x, this.ypos+y, 40+h, 40);
+    ellipse(this.xpos+x, this.ypos+y, 40, 40+h);
 
-    if (mouseIsPressed) {
-      x++;
-      h++;
-    }
-
-    if (x>width) {
-      x=0;
-    }
+    
+  
+  }
+  
+  move() {
+   this.xpos = this.xpos + this.xspeed; // my movement for my clouds
+   if (this.xpos > width) {
+     this.xpos=-100; // reset
+   }
+   
+  
   }
 }
