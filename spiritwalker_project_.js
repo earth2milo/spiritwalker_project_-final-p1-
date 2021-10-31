@@ -30,28 +30,37 @@ function setup() {
   //translate(width, height);
   //background(angelics[4]);
 
-  wanderer = new spirit(0,700);
-  kindred = new spirit (100, 500);
-  sky = new spirit(400,400);
-
+  wanderer = new spirit(300,100);
+  kindred = new spirit (100,300);
+  sky = new spirit(150,50);
+  
+  zeus = new clouds();
+  hermes = new clouds();
+  aphrodite = new clouds();
 }
 
 function draw() {
-varyingB();
-  
+  varyingB();
+
   if (frameCount%2==0) { // makes my first little trail with this effect by modifying the background's alpha value
     alpha++;
   }
   if (alpha>255) {
     alpha=0;
   }
-  background(125, 62, 30,alpha);
-wanderer.display(255,100,300);
-wanderer.move(8,10);
-kindred.display(255,500,255);
-kindred.move(4,10);
-sky.display(200,200,255);
-sky.move(3,10);
+  background(137, 207, 240, alpha);
+ //zeus.draw(320,100,255, 48);
+// hermes.draw(720,700,230, 32);
+  wanderer.display(200, 400, 300);
+  wanderer.move();
+  kindred.display(400, 200, 255);
+  kindred.move();
+  sky.display(600,300, 255);
+  sky.move();
 
-//let d = dist(wanderer.x, wanderer.y, kindred.x, kindred.y);
+
+
+
+
+  //let d = dist(wanderer.x, wanderer.y, kindred.x, kindred.y);
 }
