@@ -66,5 +66,5 @@ function draw() {
 
 
 
-  //let d = dist(wanderer.x, wanderer.y, kindred.x, kindred.y);
+  
 }
