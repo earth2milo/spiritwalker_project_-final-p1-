@@ -1,6 +1,6 @@
 // my background
 
-function varyingB() {
+function varyingB() { // my background allows the canvas to "ramp up" after Frame count reaches a high value
   
   for( i=0; i <=frameCount; i++) {
 strokeWeight(i/width);
