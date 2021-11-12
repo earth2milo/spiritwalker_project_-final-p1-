@@ -1,9 +1,9 @@
 // added function from challenge in class that I made with Charles during Challenge #2.
-class clouds {
+class clouds { // my class
 
   constructor() {
 this.fill = color(random(180,255)); // defining my clases instructions
-this.xpos = 0;
+this.xpos = 0; // my variables
 this.ypos = 0;
 this.xspeed = 1;
   }
@@ -13,7 +13,7 @@ this.xspeed = 1;
     strokeWeight(3);
     noStroke();
     fill(this.fill);       
-    ellipse(this.xpos+x, this.ypos+y, 40+h, 40);
+    ellipse(this.xpos+x, this.ypos+y, 40+h, 40); // cloud code, even though I make them look more like stars
     ellipse(this.xpos+x, this.ypos+y, 40, 40);
     ellipse(this.xpos+x, this.ypos+y, 40, 40+h);
     ellipse(this.xpos+x, this.ypos+y, 40+h, 40);
@@ -23,7 +23,7 @@ this.xspeed = 1;
   
   }
   
-  move() {
+  move() { // my move method
    this.xpos = this.xpos + this.xspeed; // my movement for my clouds
    if (this.xpos > width) {
      this.xpos=-100; // reset
