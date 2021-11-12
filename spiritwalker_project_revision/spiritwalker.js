@@ -12,14 +12,15 @@ class spirit { // my class spirit
     // this.x= x;
     //this.y= y;
     // this.diameter = (frameCount/2);  // thickness
-    // this.history = []; // array for trails
+     this.history = []; // array for trails
+    
     this.acceleration = createVector(0, 0);
     this.velocity = createVector(0, -2);
     this.position = createVector(x, y);
-    this.r = 6;
-    this.maxspeed = 8;
+    this.r = 3;
+    this.maxspeed = 3;
     this.maxforce = 0.2;
-    mouse1 = createVector(mouseX, mouseY);
+
 
 
 
@@ -34,6 +35,12 @@ class spirit { // my class spirit
 
     this.position.add(this.velocity);
     this.acceleration.mult(0);
+    
+    if(this.position.x > height || this.position.y > width) {
+      this.position.x = height/2;
+      this.position.x = width/2;
+      
+    }
   }
 
   applyForce(force) {
@@ -41,7 +48,7 @@ class spirit { // my class spirit
   }
 
   seek(angel) {
-    let reunion = p5.Vector.sub(angel, this.positon);
+    let reunion = p5.Vector.sub(this.position, angel);
 
     reunion.setMag(this.maxspeed);
 
@@ -56,7 +63,6 @@ class spirit { // my class spirit
     stroke(255, alpha); // fill
      strokeWeight(14); // thickness for the spirit's line 
     point(mouseX, mouseY);
-    //point(x,y+11.5); // my spirit's body
     point(mouseX, mouseY+11.5);
     ellipseMode(CENTER);
     stroke(255, 215, 0, alpha); // gold
@@ -79,20 +85,66 @@ class spirit { // my class spirit
     ellipse(mouseX-1, mouseY-14, 35, 8); // aura glow
   }
 
-  displayTracker() {
+  displayTracker(x,y) {
 
 
     let artemis = this.velocity.heading() + PI/2; // calculates angle of heading
     push();
     translate(this.position.x, this.position.y);
     rotate(artemis);
-    beginShape();
-    vertex(0, -this.r * 2);
-    vertex(-this.r, this.r *2);
-    vertex( this.r, this.r *2);
-    endShape(CLOSE);
-    pop();
+   
+   
+     stroke(255, alpha); // fill
+     strokeWeight(14); // thickness for the spirit's line 
+    point(x, this.r*2);
+    point(x, (this.r*2)+11.5);
+    point(-this.r, this.r*2);
+   
+    
+    ellipseMode(CENTER);
+    stroke(255, 215, 0, alpha); // gold
+    noFill();
+    ellipse(x, (this.r*2)-10, 12, 0.4);
+    ellipse(-this.r, (this.r*2)-10, 12, 0.4);
+    ellipse(this.r, this.r*2);
+
+    for (i=0; i<35; i++) { // aura for loop
+      stroke(255, i);
+    }
+    if (i>=35) {
+      i=0;
+    }
+
+    //ellipse(x-1, y-14, 35, 8); // aura glow
+    ellipse(x-1, (this.r*2)-14, 35, 8);
+    ellipse(-this.r+1, (this.r*2)-14, 35, 8);
+    
+    if (i>=35) {
+      i=0;
+    }
+    ellipse((this.r*2), (this.r*2)-14, 35, 8); // aura glow
+    ellipse(x, (this.r*2)-1, 35, 8);
+    
+    //beginShape();
+    //vertex(0, -this.r * 2);
+    //vertex(-this.r, this.r *2);
+    //vertex( this.r, this.r *2);
+    //endShape(CLOSE); 
+  pop();
+  
+  
+  //beginShape();
+  //    for (var i = 0; i < this.history.length; i++) { // stores positions of my objects' positions
+  //      let pos = this.history[i];
+  //      fill(0);
+  //      stroke(255,0,0);
+  //      vertex(this.position.x, this.position.y, 4, 16);
+  //      endShape();
+  
+      
   }
+  
+  
 
 
 

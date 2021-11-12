@@ -53,13 +53,13 @@ function draw() {
 
   background(137, 207, 240, alpha);
 
-  //  zeus.draw(320, 100, 40);
-  //  zeus.move();
-  //  hermes.draw(720, 130, 40);
-  //  aphrodite.draw(120, 200, 40);
-  //  zeus.draw(320,700,40);
-  //  zeus.move();
-  //  hermes.draw(220,600,32);
+    zeus.draw(320, 100, 40);
+    zeus.move();
+    hermes.draw(720, 130, 40);
+    aphrodite.draw(120, 200, 40);
+    zeus.draw(320,700,40);
+    zeus.move();
+    hermes.draw(220,600,32);
 
 
   wanderer.seek(mouse);
